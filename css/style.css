@@ -1,0 +1,221 @@
+:root{
+    --white: #FFF;
+    --black: #000;
+    --maincolor: #daab5a;
+    --bg: #0449aa;
+    --font: 'Open Sans', sans-serif;
+}
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: rgb(47, 173, 47);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 30px;
+    box-shadow: #FFF 1px 1px 20px;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+    
+}
+.totalheader{
+  position: relative;
+}
+header{
+  position: absolute;
+    width: 100%;
+    z-index: 100;
+
+    padding: 10px 0;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .loog img{
+    width: 80px;
+}
+header .container nav ul{
+    display: flex;
+    gap: 20px;
+}
+header .container nav ul li{
+    list-style: none;
+}
+header .container nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font); 
+}
+header .container nav ul li a:hover{
+    color: var(--maincolor);
+}
+header .container nav ul li a.active{
+    color: var(--maincolor);  
+}
+header .container .contact a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font); 
+}
+header .container .contact a:hover{
+    color: var(--maincolor);
+}
+header .container .contact i{
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 600;
+    font-family: var(--font); 
+}
+header .container .contact .bi-list{
+    display: none;
+}
+.vidd{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.vidd video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vidd::before{
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--maincolor);
+    opacity: 0.1;
+}
+.contant{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+.contant h3{
+    color: var(--white);
+    font-size: 50px;
+    font-weight: 600;
+    font-family: var(--font);
+    margin-bottom: 20px;
+}
+.contant h3 span{
+    color: var(--maincolor);
+}
+.contant p{
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font);
+    margin-bottom: 20px;
+} 
+.contant button{
+    background-color: var(--maincolor);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: updwen 1s ease-in-out infinite alternate;
+}
+.contant button:hover{
+    background-color: var(--bg);
+}
+.rank {
+    padding: 50px 0;
+  }
+
+  .rank .container .card {
+    text-align: center;
+    /* background-color: var(--bg);  */
+    margin: 20px 0;
+    color: var(--bg);
+    border: #000  1px solid;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  .rank .container .card:hover {
+    transform: scale(1.03);
+    box-shadow: #0000002d 0px 0px 20px;
+  }
+  .rank .container .card i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--maincolor);
+
+  }
+  .rank .container .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .rank .container .card p {
+    font-size: 15px;
+  }
+
+  @media (max-width: 767px) {
+    .rank .container .card {
+      margin: 10px 0;
+    }
+    header .container .loog img{
+        width: 60px;
+    }
+    header .container nav ul{
+        display: none;
+    }
+    header .container .contact .bi-list{
+      display: inline-block;
+  }
+  main .contant h3{
+    font-size: 40px;
+  }
+  main .contant p{
+    font-size: 15px;
+  }
+  main .contant button{
+    font-size: 15px;
+    padding: 5px 10px;
+    
+  }
+
+  @keyframes updwen{
+    from {transform: scale(1);}
+    to {transform: scale(1.1);
+  }
+    
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+
