@@ -155,20 +155,22 @@ header .container .contact .bi-list{
     text-align: center;
     /* background-color: var(--bg);  */
     margin: 20px 0;
+    padding: 20px;
     color: var(--bg);
     border: #000  1px solid;
     border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ;
   }
  
   .rank .container .card:hover {
     transform: scale(1.03);
     box-shadow: #0000002d 0px 0px 20px;
+    background-color: var(--maincolor);
+    color: var(--white);
   }
   .rank .container .card i {
     font-size: 50px;
     margin-bottom: 20px;
-    color: var(--maincolor);
 
   }
   .rank .container .card h4 {
@@ -176,7 +178,7 @@ header .container .contact .bi-list{
     margin-bottom: 10px;
   }
   .rank .container .card p {
-    font-size: 15px;
+    font-size: 25px;
   }
 
   @media (max-width: 767px) {
@@ -193,7 +195,7 @@ header .container .contact .bi-list{
       display: inline-block;
   }
   main .contant h3{
-    font-size: 40px;
+    font-size: 30px;
   }
   main .contant p{
     font-size: 15px;
