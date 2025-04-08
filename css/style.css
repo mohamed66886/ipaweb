@@ -5,6 +5,9 @@
     --bg: #0449aa;
     --font: 'Open Sans', sans-serif;
 }
+.container{
+  overflow: hidden;
+}
 .whatsapp{
     position: fixed;
     bottom: 20px;
@@ -180,66 +183,39 @@ header .container .contact .bi-list{
   .rank .container .card p {
     font-size: 25px;
   }
- .courses{
-  padding: 50px 0;
-  background-color: var(--bg);
-  color: var(--white);
-
- }
- .courses .container .row .col-12 h2{
-  font-size: 40px;
-  font-weight: 600;
-  font-family: var(--font);
-  margin-bottom: 20px;
-  text-align: center;
- }
- .courses .container .row .col-6 .card{
-  margin: 10px 0;
-  /* padding: 20px; */
-  border: #000  1px solid;
-  border-radius: 10px;
-  position: relative;
- }
- .courses .container .row .col-6 .card::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: #000;
-  opacity: 0.4;
- }
-
- .courses .container .row .col-6 .card:hover {
-  transform: scale(1.03);
- 
+.about{
+    padding:  0;
+    background-color: var(--bg);
 }
-.courses .container .row .col-6 .card .contantcard{
-  padding: 20px;
-  position: absolute;
-  /* background-color: #00000051; */
-  /* top: 0; */
-  bottom: 0;
-  text-align: center;
-  /* left: 0; */
-  /* width: 100%; */
-  /* height: 100%; */
-  color: var(--white);
-  z-index: 2;
-}
+.about .container img{
+    width: 90%;
 
-.courses .container .row .col-6 .card .contantcard button{
-  /* padding: 10px 20px; */
-  background-color: var(--maincolor);
-  color: var(--white);
+}
+.about .container h3{
+    font-size: 30px;
+    color: var(--white);
+    font-family: var(--font);
+    margin-top: 40px;
+}
+.about .container h3 span{
+    color: var(--maincolor);
+    text-decoration: solid underline var(--maincolor);
+}
+.about .container p{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font);
+    margin-bottom: 20px;
+    color: var(--white);
+}
+.about .container button{
+  background-color: #FFF;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  animation: updwen 1s ease-in-out infinite alternate;
+  
+
 }
+ 
 
   @media (max-width: 767px) {
     .rank .container .card {
@@ -265,6 +241,42 @@ header .container .contact .bi-list{
     padding: 5px 10px;
     
   }
+  .about .container img{
+    width: 230px;
+    margin-bottom: 20px;
+}
+.about .container{
+  text-align: center;
+}
+.about .container h3{
+    font-size: 20px;
+    color: var(--white);
+    font-family: var(--font);
+    margin-top: 0;
+
+}
+.about .container h3 span{
+    color: var(--maincolor);
+    
+    text-decoration: solid underline var(--maincolor);
+}
+.about .container p{
+    font-size: 15px;
+    font-family: var(--font);
+    margin-bottom: 20px;
+    color: var(--white);
+}
+.about .container button{
+  background-color: #FFF;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 40px;
+
+  
+
+}
+ 
+}
 
   @keyframes updwen{
     from {transform: scale(1);}
