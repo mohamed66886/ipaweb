@@ -180,6 +180,33 @@ header .container .contact .bi-list{
   .rank .container .card p {
     font-size: 25px;
   }
+ .courses{
+  padding: 50px 0;
+  background-color: var(--bg);
+  color: var(--white);
+
+ }
+ .courses .container .row .col-12 h2{
+  font-size: 40px;
+  font-weight: 600;
+  font-family: var(--font);
+  margin-bottom: 20px;
+  text-align: center;
+ }
+ .courses .container .row .col-6 .card{
+  margin: 10px 0;
+  padding: 20px;
+
+  border: #000  1px solid;
+  border-radius: 10px;
+ }
+ .courses .container .row .col-6 .card:hover {
+  transform: scale(1.03);
+  box-shadow: #0000002d 0px 0px 20px;
+  background-color: var(--maincolor);
+  color: var(--white);
+}
+
 
   @media (max-width: 767px) {
     .rank .container .card {
