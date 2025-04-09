@@ -48,6 +48,12 @@ header .container{
 header .container .loog img{
     width: 80px;
 }
+.loog .btn i{
+    font-size: 25px;
+    color: var(--white);
+    font-weight: 600;
+
+}
 header .container nav ul{
     display: flex;
     gap: 20px;
