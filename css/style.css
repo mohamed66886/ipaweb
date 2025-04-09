@@ -142,8 +142,8 @@ header .container .contact .bi-list{
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: var(--bg);
-    opacity: 0.3;
+    background: linear-gradient(to bottom, #1830cc98, #929598c5);
+    
 }
 .contant{
     position: absolute;
@@ -197,6 +197,8 @@ header .container .contact .bi-list{
     height: 225.25px;
     max-width: 214.18px;
     margin: 10px auto;
+    background-color: #daab5a5c;
+
   }
  
   .rank .container .card:hover {
@@ -207,14 +209,19 @@ header .container .contact .bi-list{
   .rank .container .card i {
     font-size: 50px;
     margin-bottom: 20px;
+    color: #daab5a;
 
   }
   .rank .container .card h4 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: var(--bg);
+    font-weight: bold;
   }
   .rank .container .card p {
     font-size: 25px;
+    color: var(--bg);
+    font-weight: bold;
   }
   .bgRedCoulmn[data-v-d39dd274]{
     padding: 0 30px 0 0;
