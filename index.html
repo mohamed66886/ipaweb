@@ -13,6 +13,19 @@
 
 </head>
 <body>
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+        <div class="toast" id="myToast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="img/1.png" width="10%" class="rounded me-2" alt="...">
+            <strong class="me-auto">Academy</strong>
+            <small> Just now </small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            👋 Hello and welcome to our website!
+          </div>
+        </div>
+      </div>
     <div class="totalheader">
     <header>
         <div class="container">
@@ -28,7 +41,7 @@
                 </ul>
             </nav>
             <div class="contact">
-                 <i class="bi bi-list"></i>
+                 <i class="bi bi-list" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
                 <a href="tel:+201062097359"><i class="bi bi-phone"></i></a>
               
                
@@ -132,5 +145,23 @@
 <script>
   AOS.init();
 </script>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+    
+     <p>Some text as: placeholder content for the offcanvas body.</p>
+     <div class="minuo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Diplomas</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+     </div>
+    </div>
+  </div>
 </body>
 </html>

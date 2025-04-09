@@ -27,3 +27,10 @@ function animateValue(element, start, end, duration) {
   }, { threshold: 0.5 });
 
   document.querySelectorAll('.card').forEach(card => observer.observe(card));
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const toastElement = document.getElementById('myToast');
+      const toast = new bootstrap.Toast(toastElement);
+      toast.show();
+    }, 1000); 
+  });
