@@ -106,8 +106,8 @@ header .container .contact .bi-list{
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: var(--maincolor);
-    opacity: 0.1;
+    background-color: var(--bg);
+    opacity: 0.3;
 }
 .contant{
     position: absolute;
@@ -160,16 +160,15 @@ header .container .contact .bi-list{
     margin: 20px 0;
     padding: 20px;
     color: var(--bg);
-    border: #000  1px solid;
-    border-radius: 10px;
+    border: #000  3px dotted;
+    border-radius: 20px;
     transition: all 0.1s ;
   }
  
   .rank .container .card:hover {
     transform: scale(1.03);
     box-shadow: #0000002d 0px 0px 20px;
-    background-color: var(--maincolor);
-    color: var(--white);
+
   }
   .rank .container .card i {
     font-size: 50px;
@@ -177,7 +176,7 @@ header .container .contact .bi-list{
 
   }
   .rank .container .card h4 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 10px;
   }
   .rank .container .card p {
@@ -203,7 +202,6 @@ header .container .contact .bi-list{
 }
 .about .container p{
     font-size: 20px;
-    font-weight: 600;
     font-family: var(--font);
     margin-bottom: 20px;
     color: var(--white);
@@ -212,10 +210,65 @@ header .container .contact .bi-list{
   background-color: #FFF;
   border: none;
   border-radius: 5px;
+  margin-bottom: 30px;
   
 
 }
- 
+.about .container button:hover{
+  background-color: #F7F7F7;
+}
+.courses{
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+
+}
+.courses .cors{
+  margin: 0 30px;
+}
+.courses .img{
+  padding: 20px;
+  display: flex
+;
+  height: 3;
+  background-color: var(--bg);
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+.courses .img img{
+  width: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+.cors .card{
+  padding: 20px;
+
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+  box-shadow: #0000002d 0px 0px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+.cors .card img{
+  width: 70px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto 30px;
+
+}
+.cors .card h4{
+  font-size: 25px;  
+  font-family: var(--font);
+  margin-bottom: 20px;
+  font-weight: bold;
+  color:var(--bg);
+}
+
 
   @media (max-width: 767px) {
     .rank .container .card {
@@ -241,6 +294,15 @@ header .container .contact .bi-list{
     padding: 5px 10px;
     
   }
+  .courses{
+    flex-direction: column;
+    margin-right: 0;
+  }
+  .courses .img{
+    width: 100%;
+
+  }
+
   .about .container img{
     width: 230px;
     margin-bottom: 20px;
