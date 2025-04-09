@@ -8,6 +8,9 @@
 .container{
   overflow: hidden;
 }
+h5{
+  color: var(--bg) !important;
+}
 .whatsapp{
     position: fixed;
     bottom: 20px;
@@ -155,14 +158,12 @@ header .container .contact .bi-list{
   }
 
   .rank .container .card {
-    text-align: center;
-    /* background-color: var(--bg);  */
-    margin: 20px 0;
-    padding: 20px;
-    color: var(--bg);
-    border: #000  3px dotted;
-    border-radius: 20px;
-    transition: all 0.1s ;
+    border: 2px solid gray;
+    border-style: dotted;
+    border-radius: 10px;
+    height: 225.25px;
+    max-width: 214.18px;
+    margin: 10px auto;
   }
  
   .rank .container .card:hover {
@@ -182,6 +183,92 @@ header .container .contact .bi-list{
   .rank .container .card p {
     font-size: 25px;
   }
+  .bgRedCoulmn[data-v-d39dd274]{
+    padding: 0 30px 0 0;
+  }
+  .bg-red[data-v-d39dd274] {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    border-right: 2px solid red;
+    padding: 10px;
+  }
+  .diplomaTitle[data-v-d39dd274] {
+    padding: 60px 0 0;
+}
+.our-diploma-title[data-v-d39dd274] {
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 133%;
+  color: #fff !important;
+  font-style: normal !important;
+  text-align: start;
+  font-size: 37px;
+  margin-left: 40px;
+  width: 358px;
+}
+.diplomaText[data-v-d39dd274] {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 133%;
+  letter-spacing: -.01em;
+  color: #fff !important;
+  margin-left: 37px;
+  width: 241.09px;
+}
+.bg-red img[data-v-d39dd274] {
+  display: block;
+  margin: 0 auto;
+}
+.cardLink[data-v-d39dd274] {
+  text-decoration: none;
+  font-family: League Spartan;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 133%;
+  letter-spacing: -.01em;
+  margin: 20px 0 !important;
+}
+.CourseCard[data-v-d39dd274] {
+  width: 262px;
+  height: 327px;
+  background: #ffffff;
+  box-shadow: 0 4px 4px #00000040;
+  border-radius: 8px;
+  transition: 1s;
+  display: flex
+;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardIMG[data-v-d39dd274] {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.cardIMG2[data-v-d39dd274] {
+  display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.card-paragraph[data-v-d39dd274] {
+  padding-top: 10px;
+  font-size: 95%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  height: 100%;
+  box-sizing: border-box;
+  height: 102px;
+  color: var(--bg);
+  max-width: 220px;
+}
+
 .about{
     padding:  0;
     background-color: var(--bg);
@@ -312,38 +399,71 @@ footer{
     width: 100%;
 
   }
-
-  .about .container img{
-    width: 230px;
-    margin-bottom: 20px;
+  .bg-red[data-v-d39dd274] {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    border-right: none;
+    border-bottom: 4px solid red;
 }
-.about .container{
+.diplomaTitle[data-v-d39dd274] {
+  width: 100% !important;
+  text-align: center !important;
+}
+.our-diploma-title[data-v-d39dd274] {
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 133%;
+  color: #fff !important;
+  font-style: normal !important;
   text-align: center;
+  font-size: 29px;
+  margin: 0 !important;
+  width: 100%;
 }
-.about .container h3{
-    font-size: 20px;
-    color: var(--white);
-    font-family: var(--font);
-    margin-top: 0;
-
+.diplomaText[data-v-d39dd274] {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: -.01em;
+  color: #fff !important;
+  margin: 0 !important;
+  width: 100%;
 }
-.about .container h3 span{
-    color: var(--maincolor);
-    
-    text-decoration: solid underline var(--maincolor);
+.bg-red img[data-v-d39dd274] {
+  width: 171px !important;
+  height: 193px !important;
 }
-.about .container p{
-    font-size: 15px;
-    font-family: var(--font);
-    margin-bottom: 20px;
-    color: var(--white);
+.bgRedCoulmn[data-v-d39dd274] {
+  padding: 0;
 }
-.about .container button{
-  background-color: #FFF;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 40px;
-
+.allTracks[data-v-d39dd274] {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133%;
+  text-align: center !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 0 10px;
+}
+.card-title[data-v-d39dd274] {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px !important;
+  line-height: 133%;
+  letter-spacing: -.01em;
+}
+.cardLink p[data-v-d39dd274] {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: -.01em;
+}
+ 
   
 
 }
