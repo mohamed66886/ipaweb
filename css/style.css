@@ -30,6 +30,7 @@ h5{
     animation: bounce 1s infinite;
     
 }
+
 .totalheader{
   position: relative;
 }
@@ -74,6 +75,11 @@ header .container nav ul li a:hover{
 header .container nav ul li a.active{
     color: var(--maincolor);  
 }
+header .container .contact{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 header .container .contact a{
     text-decoration: none;
     color: var(--white);
@@ -93,7 +99,22 @@ header .container .contact i{
 header .container .contact .bi-list{
     display: none;
 }
+header .container .contact button{
+   background-color: white;
+   border-radius: 10px;
+   border: none;
 
+   padding: 2px 6px;
+   color: var(--bg);
+}
+header .container .contact button i{
+  font-size: 20px;  
+  color: #000;
+  margin-left: 4px;
+}
+header .container .contact button:hover{
+    color: var(--maincolor);
+}
 .offcanvas.show:not(.hiding), .offcanvas.showing {
 
   background: var(--bg) !important;
@@ -463,6 +484,13 @@ footer{
     padding: 5px 10px;
     
   }
+  header .container .contact button{
+    font-size: 15px;
+  }
+  header .container .contact button i{
+    font-size: 15px;
+  }
+
   .courses{
     flex-direction: column;
     margin-right: 0;

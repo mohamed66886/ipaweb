@@ -34,3 +34,75 @@ function animateValue(element, start, end, duration) {
       toast.show();
     }, 1000); 
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    // تهيئة EmailJS
+    emailjs.init('8MaeV7KdZlgEJTvNkMRYJ'); // استخدم Private Key الخاص بك
+    
+    // عناصر DOM
+    const loginBtn = document.getElementById('loginBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const loginForm = document.getElementById('loginForm');
+    
+    // تحقق من وجود بيانات محفوظة
+    const savedUser = localStorage.getItem('userData');
+    
+    if (savedUser) {
+      const userData = JSON.parse(savedUser);
+      updateUI(userData);
+    }
+    
+    // تحديث واجهة المستخدم بناء على البيانات
+    function updateUI(userData) {
+      loginBtn.innerHTML = `${userData.name} <i class="bi bi-person-circle"></i>`;
+      loginBtn.style.backgroundColor = 'transparent';
+      loginBtn.style.color = 'white';
+    }
+    
+    // معالجة تقديم النموذج
+    submitBtn.addEventListener('click', function() {
+      if (loginForm.checkValidity()) {
+        const userData = {
+          name: document.getElementById('name').value,
+          address: document.getElementById('address').value,
+          faculty: document.getElementById('faculty').value,
+          phone: document.getElementById('phone').value
+        };
+        
+        // حفظ البيانات في LocalStorage
+        localStorage.setItem('userData', JSON.stringify(userData));
+        
+        // تحديث واجهة المستخدم
+        updateUI(userData);
+        
+        // إرسال البيانات عبر البريد الإلكتروني
+        sendEmail(userData);
+        
+        // إغلاق النموذج
+        const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+        modal.hide();
+      } else {
+        loginForm.reportValidity();
+      }
+    });
+    
+    // دالة إرسال البريد الإلكتروني
+    function sendEmail(userData) {
+      const templateParams = {
+        to_email: 'mohamedabdouooo28@gmail.com',
+        name: userData.name,
+        address: userData.address,
+        faculty: userData.faculty,
+        phone: userData.phone,
+        from_name: 'Website Registration Form'
+      };
+      
+      emailjs.send('service_2tdk8bt', 'template_aia8ddv', templateParams)
+        .then(function(response) {
+          console.log('Email sent successfully!', response.status, response.text);
+          alert('تم تسجيل البيانات وإرسالها بنجاح!');
+        }, function(error) {
+          console.log('Failed to send email:', error);
+          alert('حدث خطأ أثناء إرسال البيانات، لكن تم حفظها محلياً.');
+        });
+    }
+  });
