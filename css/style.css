@@ -517,7 +517,33 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 
 }
 
+#testimonials {
+  background-color: var(--bg) !important;
+  color: var(--maincolor) !important;
+}
 
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-text {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.rating {
+  font-size: 0.9rem;
+}
 .carousel-item .row .card-body .card-title{
   font-size: 25px;
   font-family: var(--font);
@@ -683,7 +709,14 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   margin-top: 40px;
   font-weight: bolder;
 }
+.testimonial-card {
+  margin-bottom: 1.5rem;
+  padding: 0 !important;
 }
+.testimonial-card div h5{
+  font-size: 15px;
+}
+  }
  
 
 
