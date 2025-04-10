@@ -565,6 +565,60 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   margin-bottom: 30px;
   color:var(--white) !important;
 }
+.footertop{
+  color: var(--bg);
+  padding: 30px 0;
+}
+.footertop h5{
+  font-size: 25px;
+  font-family: var(--font);
+  margin-bottom: 20px;
+}
+.footertop ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.footertop ul a{
+  color: var(--bg);
+  text-decoration: none;
+  font-size: 20px;
+}
+.footertop ul li a:hover{
+  color: var(--maincolor);
+  }
+  .footertop img{
+    width: 100%;
+
+  }
+footer{
+  background-color: var(--bg);
+  color: var(--white);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--font);
+}
+footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer  a{
+  color: var(--white);
+  text-decoration: none;
+}
+footer ul li a:hover{
+  color: var(--maincolor);
+}
 
   @media (max-width: 767px) {
     .rank .container .card {
@@ -715,6 +769,15 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 }
 .testimonial-card div h5{
   font-size: 15px;
+}
+.footertop{
+  text-align: center;
+}
+.footertop ul{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: var(--bg) 1px solid;
 }
   }
  
