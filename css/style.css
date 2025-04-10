@@ -457,16 +457,53 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   font-weight: bold;
   color:var(--bg);
 }
-footer{
-  background-color: var(--bg);
-  padding: 5px;
-  text-align: center;
-  color: var(--white);
-  font-size: 20px;
-  font-family: var(--font);
-  margin-top: 20px;
-  
+.trainer-card {
+  transition: all 0.3s ease;
+  border-radius: 15px !important;
+  overflow: hidden;
 }
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.carousel-item {
+  padding: 0 15px;
+}
+
+.trainer-card {
+  transition: all 0.3s ease;
+  border-radius: 15px !important;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  max-width: 400px;
+}
+
+/* أزرار التنقل */
+.carousel-control-prev, .carousel-control-next {
+  width: 40px;
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: -10px;
+}
+
+.carousel-control-next {
+  right: -10px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-size: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
 
 
   @media (max-width: 767px) {
@@ -588,8 +625,23 @@ footer{
   height: 24px;
 
 }
-  
+.carousel-control-prev {
+  left: -30px;
+}
 
+.carousel-control-next {
+  right: -30px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.trainer-card {
+  margin: 0 auto;
+}
 }
  
 
