@@ -11,6 +11,15 @@
 h5{
   color: var(--bg) !important;
 }
+.user-image {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 5px;
+  outline: #FFF 2px solid;
+  vertical-align: middle;
+}
 .whatsapp{
     position: fixed;
     bottom: 20px;
@@ -573,6 +582,11 @@ footer{
 }
 .toast-body{
   font-size: 10px !important;
+}
+.user-image {
+  width: 24px;
+  height: 24px;
+
 }
   
 

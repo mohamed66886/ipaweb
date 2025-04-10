@@ -53,37 +53,56 @@ function animateValue(element, start, end, duration) {
     
     // تحديث واجهة المستخدم بناء على البيانات
     function updateUI(userData) {
-      loginBtn.innerHTML = `${userData.name} <i class="bi bi-person-circle"></i>`;
+      if (userData.imageUrl) {
+        loginBtn.innerHTML = `${userData.name} <img src="${userData.imageUrl}" class="user-image">`;
+      } else {
+        loginBtn.innerHTML = `${userData.name} <i class="bi bi-person-circle"></i>`;
+      }
       loginBtn.style.backgroundColor = 'transparent';
       loginBtn.style.color = 'white';
     }
     
-    // معالجة تقديم النموذج
     submitBtn.addEventListener('click', function() {
       if (loginForm.checkValidity()) {
+        const userImageInput = document.getElementById('userImage');
         const userData = {
           name: document.getElementById('name').value,
           address: document.getElementById('address').value,
           faculty: document.getElementById('faculty').value,
-          phone: document.getElementById('phone').value
+          phone: document.getElementById('phone').value,
+          imageUrl: '' // سيتم تعبئتها لاحقاً
+        };
+             // معالجة الصورة إذا تم تحميلها
+      if (userImageInput.files && userImageInput.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+          userData.imageUrl = e.target.result;
+          saveUserData(userData);
         };
         
-        // حفظ البيانات في LocalStorage
-        localStorage.setItem('userData', JSON.stringify(userData));
-        
-        // تحديث واجهة المستخدم
-        updateUI(userData);
-        
-        // إرسال البيانات عبر البريد الإلكتروني
-        sendEmail(userData);
-        
-        // إغلاق النموذج
-        const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-        modal.hide();
+        reader.readAsDataURL(userImageInput.files[0]);
       } else {
-        loginForm.reportValidity();
+        saveUserData(userData);
       }
-    });
+    } else {
+      loginForm.reportValidity();
+    }
+  });
+  function saveUserData(userData) {
+    // حفظ البيانات في LocalStorage
+    localStorage.setItem('userData', JSON.stringify(userData));
+    
+    // تحديث واجهة المستخدم
+    updateUI(userData);
+    
+    // إرسال البيانات عبر البريد الإلكتروني
+    sendEmail(userData);
+    
+    // إغلاق النموذج
+    const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+    modal.hide();
+  }
     
     // دالة إرسال البريد الإلكتروني
     function sendEmail(userData) {
