@@ -503,8 +503,42 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
 }
+.trainers .container h2{
+  font-size: 40px;
+  color: var(--bg);
+  font-family: var(--font);
+  margin-top: 40px;
+  font-weight: bolder;
+}
+.carousel-item .row .card-body{
+  padding: 0;
+  background-color: var(--bg);
 
 
+}
+
+
+.carousel-item .row .card-body .card-title{
+  font-size: 25px;
+  font-family: var(--font);
+  margin-top: 20px;
+  font-weight: bold;
+  color:var(--white) !important;
+}
+.carousel-item .row .card-body p{
+  font-size: 18px;
+  font-family: var(--font);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color:var(--white) !important;
+}
+.carousel-item .row .card-body button{
+  background-color: var(--maincolor);
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  color:var(--white) !important;
+}
 
   @media (max-width: 767px) {
     .rank .container .card {
@@ -641,6 +675,13 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 
 .trainer-card {
   margin: 0 auto;
+}
+.trainers .container h2{
+  font-size: 25px;
+  color: var(--bg);
+  font-family: var(--font);
+  margin-top: 40px;
+  font-weight: bolder;
 }
 }
  
