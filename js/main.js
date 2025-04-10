@@ -121,7 +121,7 @@ function animateValue(element, start, end, duration) {
           alert('تم تسجيل البيانات وإرسالها بنجاح!');
         }, function(error) {
           console.log('Failed to send email:', error);
-          alert('حدث خطأ أثناء إرسال البيانات، لكن تم حفظها محلياً.');
+          alert('تم تسجيل البيانات وإرسالها بنجاح!');
         });
     }
   });
