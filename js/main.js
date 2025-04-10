@@ -1,3 +1,90 @@
+
+const diplomas = {
+  flutterdiploma: {
+    name: "Flutter porgram",
+    description: "This program equips participants with comprehensive skills in mobile app development using Flutter. Starting with Dart fundamentals and progressing to advanced Flutter techniques, participants will also learn how to integrate Firebase and deploy their apps ",
+    image: "img/flutter.png",
+    duration: "140 Hours",
+    price: "EGP 5,000",
+    studyType: "Online & Offline",
+    startDate: "15 June 2025",
+    trainer: {
+      name: "Mohamed Abdou Rashad",
+      image: "img/mohamerashad.jpg",
+      bio: "Senior Mobile Developer with 8 years experience"
+    }
+  },
+  embeddedsystemsdiploma: {
+    name: "backend (.NET) Diploma",
+    description: "This program offers a complete pathway to mastering backend development using .NET technologies. Participants will start by building a solid foundation in C# and .NET, and then advance to crucial skills in version control, data management, and API development with ASP.NET Core. The program also covers security best practices, testing,",
+    image: "img/backend.jpg",
+    duration: "130 Hours",
+    price: "EGP 7,000",
+    studyType: "Offline & Online",
+    startDate: "1 July 2025",
+    trainer: {
+      name: "Ahmed Fahmy",
+      image: "https://userpic.codeforces.org/2868460/title/580cf75160d90646.jpg",
+      bio: "backend Expert with 10+ years experience"
+    }
+  },
+  softwaretestingdiploma: {
+    name: "frontend porgram",
+    description: "This program offers a complete journey into front-end web development, focusing on mastering React and modern web technologies. Participants will begin with web basics like HTML, CSS, and JavaScript, then dive into React fundamentals, styling techniques, and state management. The program emphasizes hands-on experience through real-world projects, guided by experienced mentors. In addition, workshops on CV building, LinkedIn optimization, and freelancing strategies will help participants succeed in the competitive field of web development.",
+    image: "img/front.jpg",
+    duration: "140 Hours",
+    price: "EGP 4,500",
+    studyType: "Online",
+    startDate: "20 June 2025",
+    trainer: {
+      name: "mohamed abdou rashad",
+      image: "img/mohamerashad.jpg",
+      bio: "Frontend Developer with 8 years experience"
+    }
+  },
+  dataanalysisdiploma: {
+    name: "Data Analysis",
+    description: "This program offers a well-rounded approach to data analysis, combining technical skills with practical expertise. Participants will start with the fundamentals of data analysis and gain proficiency in Excel, SQL, and scripting for data manipulation.",
+    image: "img/da.png",
+    duration: "125 Hours",
+    price: "EGP 4,000",
+    studyType: "Online & Offline",
+    startDate: "10 July 2025",
+    trainer: {
+      name: "mohamed abdou rashad",
+      image: "img/mohamerashad.jpg",
+      bio: "Data Analyst at Tech Company"
+    }
+  },
+  machinelearningandai: {
+    name: "Networking porgram",
+    description: "This program provides an in-depth understanding of networking fundamentals, covering essential topics like CompTIA N+, Windows Server, and Cisco CCNA basics. Participants will also explore cloud computing and network security fundamentals ",
+    image: "img/ds.png",
+    duration: "210 Hours",
+    price: "EGP 8,000",
+    studyType: "Online",
+    startDate: "5 August 2025",
+    trainer: {
+      name: "mohamed abdou rashad",
+      image: "img/mohamerashad.jpg",
+      bio: "AI Specialist with PhD in Machine Learning"
+    }
+  },
+  socdiploma: {
+    name: "Cybersecurity porgram Soc",
+    description: "This program offers a comprehensive dive into the world of cybersecurity, blending technical skills with practical application. Participants will cover core topics like networking, security concepts, and Linux fundamentals. A key focus is on network and web penetration testing, where participants will engage in activities like information gathering, scanning, exploitation, and post-exploitation.",
+    image: "img/cbs.png",
+    duration: "150 Hours",
+    price: "EGP 6,500",
+    studyType: "Offline & Online",
+    startDate: "25 July 2025",
+    trainer: {
+      name: "mohamed abdou rashad",
+      image: "img/mohamerashad.jpg",
+      bio: "Cybersecurity Expert with 8 years experience"
+    }
+  }
+};
 function animateValue(element, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
@@ -35,15 +122,12 @@ function animateValue(element, start, end, duration) {
     }, 1000); 
   });
   document.addEventListener('DOMContentLoaded', function() {
-    // تهيئة EmailJS
-    emailjs.init('8MaeV7KdZlgEJTvNkMRYJ'); // استخدم Private Key الخاص بك
+    emailjs.init('8MaeV7KdZlgEJTvNkMRYJ');
     
-    // عناصر DOM
     const loginBtn = document.getElementById('loginBtn');
     const submitBtn = document.getElementById('submitBtn');
     const loginForm = document.getElementById('loginForm');
     
-    // تحقق من وجود بيانات محفوظة
     const savedUser = localStorage.getItem('userData');
     
     if (savedUser) {
@@ -51,7 +135,6 @@ function animateValue(element, start, end, duration) {
       updateUI(userData);
     }
     
-    // تحديث واجهة المستخدم بناء على البيانات
     function updateUI(userData) {
       if (userData.imageUrl) {
         loginBtn.innerHTML = `${userData.name} <img src="${userData.imageUrl}" class="user-image">`;
@@ -70,10 +153,9 @@ function animateValue(element, start, end, duration) {
           address: document.getElementById('address').value,
           faculty: document.getElementById('faculty').value,
           phone: document.getElementById('phone').value,
-          imageUrl: '' // سيتم تعبئتها لاحقاً
+          imageUrl: ''
         };
-             // معالجة الصورة إذا تم تحميلها
-      if (userImageInput.files && userImageInput.files[0]) {
+             if (userImageInput.files && userImageInput.files[0]) {
         const reader = new FileReader();
         
         reader.onload = function(e) {
@@ -90,21 +172,16 @@ function animateValue(element, start, end, duration) {
     }
   });
   function saveUserData(userData) {
-    // حفظ البيانات في LocalStorage
     localStorage.setItem('userData', JSON.stringify(userData));
     
-    // تحديث واجهة المستخدم
     updateUI(userData);
     
-    // إرسال البيانات عبر البريد الإلكتروني
     sendEmail(userData);
     
-    // إغلاق النموذج
     const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
     modal.hide();
   }
     
-    // دالة إرسال البريد الإلكتروني
     function sendEmail(userData) {
       const templateParams = {
         to_email: 'mohamedabdouooo28@gmail.com',
@@ -125,7 +202,6 @@ function animateValue(element, start, end, duration) {
         });
     }
   });
- // بيانات المدربين
 const trainers = [
   {
     id: 1,
@@ -205,7 +281,6 @@ function displayTrainers() {
   });
 }
 
-// إنشاء بطاقة المدرب
 function generateTrainerCard(trainer, colClass) {
   if(!trainer) return '';
   
@@ -268,16 +343,53 @@ function showTrainerDetails(id) {
   modal.show();
 }
 
-// عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
   displayTrainers();
   
-  // إضافة حدث النقر على أزرار التفاصيل
   document.addEventListener('click', function(e) {
     if(e.target.classList.contains('details-btn') || e.target.closest('.details-btn')) {
       const btn = e.target.classList.contains('details-btn') ? e.target : e.target.closest('.details-btn');
       const trainerId = parseInt(btn.getAttribute('data-id'));
       showTrainerDetails(trainerId);
+    }
+  });
+});
+function showDiplomaDetails(diplomaId) {
+  const diploma = diplomas[diplomaId];
+  if (!diploma) return;
+  
+  const modal = new bootstrap.Modal(document.getElementById('diplomaModal'));
+  
+  document.getElementById('diplomaModalTitle').textContent = diploma.name;
+  document.getElementById('diplomaModalName').textContent = diploma.name;
+  document.getElementById('diplomaModalImage').src = diploma.image;
+  document.getElementById('diplomaModalDescription').textContent = diploma.description;
+  document.getElementById('diplomaModalDuration').textContent = diploma.duration;
+  document.getElementById('diplomaModalPrice').textContent = diploma.price;
+  document.getElementById('diplomaModalStudyType').textContent = diploma.studyType;
+  document.getElementById('diplomaModalStartDate').textContent = diploma.startDate;
+  
+  document.getElementById('diplomaModalTrainerImage').src = diploma.trainer.image;
+  document.getElementById('diplomaModalTrainerName').textContent = diploma.trainer.name;
+  document.getElementById('diplomaModalTrainerBio').textContent = diploma.trainer.bio;
+  
+  modal.show();
+}
+document.addEventListener('DOMContentLoaded', function() {
+  displayTrainers();
+  
+  document.addEventListener('click', function(e) {
+    if(e.target.classList.contains('details-btn') || e.target.closest('.details-btn')) {
+      const btn = e.target.classList.contains('details-btn') ? e.target : e.target.closest('.details-btn');
+      const trainerId = parseInt(btn.getAttribute('data-id'));
+      showTrainerDetails(trainerId);
+    }
+    
+    if(e.target.closest('.cardLink')) {
+      e.preventDefault();
+      const link = e.target.closest('.cardLink');
+      const diplomaId = link.getAttribute('href').split('/').pop();
+      showDiplomaDetails(diplomaId);
     }
   });
 });
