@@ -394,3 +394,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById('backgroundAudio');
+  const audioBtn = document.getElementById('audioControl');
+
+  function tryAutoPlay() {
+      audio.volume = 0.02; 
+      const playPromise = audio.play();
+      
+      if (playPromise !== undefined) {
+          playPromise.catch(error => {
+
+              audioBtn.classList.add('muted');
+          });
+      }
+  }
+
+  audioBtn.addEventListener('click', function() {
+      if (audio.paused) {
+          audio.play();
+          audioBtn.classList.remove('muted');
+      } else {
+          audio.pause();
+          audioBtn.classList.add('muted');
+      }
+  });
+  
+
+  tryAutoPlay();
+  
+  const muteIcon = document.createElement('i');
+  muteIcon.className = 'bi bi-volume-mute';
+  audioBtn.appendChild(muteIcon);
+});
+
+function showLoading() {
+  document.getElementById('loadingSection').style.display = 'flex';
+}
+
+function hideLoading() {
+  const loading = document.getElementById('loadingSection');
+  loading.style.opacity = '0';
+  setTimeout(() => {
+      loading.style.display = 'none';
+  }, 500);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  showLoading();
+
+  setTimeout(hideLoading, 1000);
+  
+});

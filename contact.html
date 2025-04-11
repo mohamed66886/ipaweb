@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - IPA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/IMG_7897.jpg" />
+</head>
+<body>
+    <div class="loading-overlay" id="loadingSection">
+        <div class="loading-content">
+            <img src="img/1.png" alt="IPA Logo" class="loading-logo">
+            <div class="loading-circle"></div>
+        </div>
+    </div>
+    <div class="totalheader">
+        <header style="background-color: var(--bg); " >
+            <div class="container">
+                <div class="loog">
+                    <a href="index.html"><img src="img/2 (1).png" alt="Logo"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html"  class="active">Contact</a></li>
+    
+                       
+                    </ul>
+                </nav>
+                <div class="contact">
+                    <button class="btn btn-primary" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Log in <i class="bi bi-box-arrow-in-right"></i>
+                      </button>
+        
+                        <i class="bi bi-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"></i>
+                   
+                    
+                
+                   
+                  
+                </div>
+                </div>
+                </header>
+                </div>
+<main class="contact-page">
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 data-aos="fade-down">Get In Touch</h1>
+            <p data-aos="fade-up" data-aos-delay="300">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form-container">
+                        <h2 class="mb-4">Send Us a Message</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>Select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Admissions">Admissions</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-info">
+                        <h2 class="mb-4">Contact Information</h2>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Our Location</h4>
+                                <p>Kafr El Sheikh </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone Numbers</h4>
+                                <p>+201000000000</p>
+                                <p>+201000000000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Addresses</h4>
+                                <p>mohamerashad@ipa.edu</p>
+                                <p>mohamerashad@ipa.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Working Hours</h4>
+                                <p>Sunday - Thursday: 9:00 AM - 5:00 PM</p>
+                                <p>Friday - Saturday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h4>Follow Us</h4>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section" data-aos="fade-up">
+        <div class="container">
+        <div class="container-fluid p-0">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1701065.2201977056!2d32.2139472!3d31.1154678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7ab9bf265629d%3A0xb8a1acf15c5f5ee0!2z2KPZg9in2K_ZitmF2YrYqSDYp9mE2KfYrdiq2LHYp9mBINin2YTZhdmH2YbZiiDYp9mE2K_ZiNmE2YrYqQ!5e1!3m2!1sar!2seg!4v1744375939726!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+        </div>
+    </section>
+  
+</main>
+<footer class="modern-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <img src="img/2 (1).png" alt="IPA Academy" class="footer-logo">
+                <p class="footer-about">Professional International Training Company (a closed joint stock company) was established on 14/6/2015.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html§#courses">Courses</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 class="footer-heading">Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="bi bi-geo-alt"></i>Kafr El Sheikh</li>
+                    <li><i class="bi bi-telephone"></i> +20 123 456 7890</li>
+                    <li><i class="bi bi-envelope"></i>mohamedrashad2003@.com</li>
+                    <li><i class="bi bi-clock"></i> Sun-Thu: 9AM - 5PM</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Subscribe to get updates on courses and events</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="subscribe-btn">
+                        <i class="bi bi-send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 IPA Academy. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="§">by mohamed rashad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="whatsapp">
+    <a href="https://wa.me/201062097359" style="color: #fff;"><i class="bi bi-whatsapp"></i></a>
+</div>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel" style="width: 300px;">
+
+<div class="offcanvas-header bg-light">
+  <div class="d-flex align-items-center">
+    <a href="index.html" class="text-decoration-none">
+      <img src="img/1.png" alt="Logo" width="40" height="40" class="me-2">
+    </a>
+    <h5 class="offcanvas-title mb-0" id="sidebarMenuLabel">Academy</h5>
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+
+<div class="offcanvas-body p-0">
+    <nav class="nav flex-column">
+        <a class="nav-link px-4 py-3 border-bottom " href="index.html" style="color: #fff;" >
+          <i class="bi bi-house-door me-2"></i> Home
+        </a>
+        <a class="nav-link px-4 py-3 border-bottom" href="about.html" style="color: #fff;">
+          <i class="bi bi-info-circle me-2"></i> About
+        </a>
+        <a class="nav-link px-4 py-3 border-bottom" href="index.html#courses" style="color: #fff;">
+          <i class="bi bi-book me-2"></i> Courses
+        </a>
+        <a class="nav-link px-4 py-3 border-bottom" href="events.html" style="color: #fff;">
+          <i class="bi bi-calendar-event me-2"></i> Events
+        </a>
+        <a class="nav-link px-4 py-3 border-bottom" href="contact.html" style="color: var(--maincolor);">
+          <i class="bi bi-telephone me-2"></i> Contact
+        </a>
+      </nav>
+  
+</div>
+</div>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="loginModalLabel">Register Info</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form id="loginForm">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Faculty</label>
+          <input type="text" class="form-control" id="faculty" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" required pattern="^01[0-2,5]{1}[0-9]{8}$">
+        </div>
+        <div class="mb-3">
+          <label for="userImage" class="form-label">Upload Image</label>
+          <input type="file" class="form-control" id="userImage" accept="image/*">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="submitBtn" class="btn btn-primary">Register</button>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>
