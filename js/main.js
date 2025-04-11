@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const audioBtn = document.getElementById('audioControl');
 
   function tryAutoPlay() {
-      audio.volume = 0.02; 
+      audio.volume = 1; 
       const playPromise = audio.play();
       
       if (playPromise !== undefined) {
