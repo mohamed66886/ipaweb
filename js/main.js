@@ -206,10 +206,10 @@ function animateValue(element, start, end, duration) {
 const trainers = [
   {
     id: 1,
-    name: "mohamed abdou rashad",
-    course: "  Advanced Web Development",
+    name: " mohamed abdou",
+    course: " Digital Marketing",
     image: "../img/mohamerashad.jpg",
-    bio: "Web developer with 10 years of experience in programming and web development. Specialized in React.js and Node.js. Holds several certifications from major tech companies.",
+    bio: "developer",
     social: {
       facebook: "#",
       twitter: "#",
@@ -219,10 +219,10 @@ const trainers = [
   },
   {
     id: 2,
-    name: " Sarah Abdullah",
+    name: " mohamed abdou",
     course: " Digital Marketing",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-    bio: "A Google-certified digital marketing expert specializing in search engine optimization and advertising campaign management, she has helped over 50 companies achieve their marketing goals.",
+    image: "../img/mohamerashad.jpg",
+    bio: "developer",
     social: {
       facebook: "#",
       twitter: "#",
@@ -232,10 +232,10 @@ const trainers = [
   },
   {
     id: 3,
-    name: "Muhammad Ali",
-    course: "data analysis",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-    bio: "An expert in data analysis and machine learning. He works as a senior data analyst at a major company. He holds a master's degree in data science from a prestigious university.",
+    name: " mohamed abdou",
+    course: " Digital Marketing",
+    image: "../img/mohamerashad.jpg",
+    bio: "developer",
     social: {
       facebook: "#",
       twitter: "#",
@@ -245,95 +245,127 @@ const trainers = [
   },
   {
     id: 4,
-    name: "Noura Ahmed",
-    course: "Graphic design",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
-    bio: "A professional graphic designer with 8 years of experience in the design field. She specializes in designing visual identities and marketing materials. She works with clients from all over the world.",
+    name: " mohamed abdou",
+    course: " Digital Marketing",
+    image: "../img/mohamerashad.jpg",
+    bio: "developer",
     social: {
       facebook: "#",
       twitter: "#",
       linkedin: "#",
       website: "#"
+      
+    }
+  }
+  ,
+  {
+    id: 5,
+    name: " mohamed abdou",
+    course: " Digital Marketing",
+    image: "../img/mohamerashad.jpg",
+    bio: "developer",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      website: "#"
+      
+    }
+  }
+  ,
+  {
+    id: 6,
+    name: " mohamed abdou",
+    course: " Digital Marketing",
+    image: "../img/mohamerashad.jpg",
+    bio: "developer",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      website: "#"
+      
     }
   }
 ];
 
 
-function displayTrainers() {
-  const trainersContainer = document.getElementById('trainersContainer');
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('trainersContainer');
+  const itemsPerSlide = window.innerWidth >= 992 ? 4 : 2;
+  const totalSlides = Math.ceil(trainers.length / itemsPerSlide);
   
-  trainers.forEach((trainer, index) => {
+  // Create carousel items
+  for (let i = 0; i < totalSlides; i++) {
     const item = document.createElement('div');
-    item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+    item.className = `carousel-item ${i === 0 ? 'active' : ''}`;
     
-    item.innerHTML = `
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10">
-          <div class="row justify-content-center">
-            ${generateTrainerCard(trainer, 'col-12 col-sm-10 col-md-6')}
-            ${window.innerWidth >= 768 && trainers[index+1] ? generateTrainerCard(trainers[index+1], 'col-12 col-sm-10 col-md-6') : ''}
+    const row = document.createElement('div');
+    row.className = 'row justify-content-center';
+    
+    const startIndex = i * itemsPerSlide;
+    const endIndex = startIndex + itemsPerSlide;
+    
+    trainers.slice(startIndex, endIndex).forEach(trainer => {
+      const col = document.createElement('div');
+      col.className = 'col-md-6 col-lg-3 mb-4';
+      col.innerHTML = `
+        <div class="card h-100 trainer-card">
+          <div class="card-img-top overflow-hidden">
+            <img src="${trainer.image}" class="w-100 h-100 object-fit-cover" alt="${trainer.name}">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">${trainer.name}</h5>
+            <p class="text-primary mb-3">${trainer.course}</p>
+            <button class="btn btn-outline-primary details-btn" data-id="${trainer.id}">
+              <i class="fas fa-info-circle me-2"></i> View Details
+            </button>
           </div>
         </div>
-      </div>
-    `;
+      `;
+      row.appendChild(col);
+    });
     
-    trainersContainer.appendChild(item);
-    if(window.innerWidth >= 768) index++; 
-  });
-}
-
-function generateTrainerCard(trainer, colClass) {
-  if(!trainer) return '';
+    item.appendChild(row);
+    container.appendChild(item);
+  }
   
-  return `
-    <div class="${colClass} mb-4">
-      <div class="card h-100 trainer-card border-0 shadow-sm">
-        <div class="card-img-top overflow-hidden" style="height: 250px;">
-          <img src="${trainer.image}" class="w-100 h-100 object-fit-cover" alt="${trainer.name}">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title fw-bold">${trainer.name}</h5>
-          <p class="text-primary mb-3">${trainer.course}</p>
-          <button class="btn btn-outline-primary details-btn" data-id="${trainer.id}">
-            <i class="fas fa-info-circle me-2"></i> details 
-          </button>
-        </div>
-      </div>
-    </div>
-  `;
-}
+  // Initialize modal functionality
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.details-btn')) {
+      const btn = e.target.closest('.details-btn');
+      const trainerId = parseInt(btn.getAttribute('data-id'));
+      showTrainerDetails(trainerId);
+    }
+  });
+});
 
-
+// Show Trainer Details in Modal
 function showTrainerDetails(id) {
   const trainer = trainers.find(t => t.id === id);
   if (!trainer) return;
   
-  const modalTitle = document.getElementById('trainerModalTitle');
-  const modalBody = document.getElementById('trainerModalBody');
-  
-  modalTitle.textContent = trainer.name;
-  modalBody.innerHTML = `
+  document.getElementById('trainerModalTitle').textContent = trainer.name;
+  document.getElementById('trainerModalBody').innerHTML = `
     <div class="row">
       <div class="col-md-4 text-center">
         <img src="${trainer.image}" class="img-fluid rounded-circle mb-3 border border-3 border-primary" style="width: 200px; height: 200px; object-fit: cover;" alt="${trainer.name}">
-        
         <div class="d-flex justify-content-center gap-2 mb-4">
           <a href="${trainer.social.facebook}" class="btn btn-primary btn-sm rounded-circle" target="_blank"><i class="bi bi-facebook"></i></a>
           <a href="${trainer.social.twitter}" class="btn btn-info btn-sm rounded-circle text-white" target="_blank"><i class="bi bi-twitter-x"></i></a>
           <a href="${trainer.social.linkedin}" class="btn btn-primary btn-sm rounded-circle" target="_blank"><i class="bi bi-linkedin"></i></a>
-          <a href="${trainer.social.website}" class="btn btn-success btn-sm rounded-circle" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="${trainer.social.website}" class="btn btn-success btn-sm rounded-circle" target="_blank"><i class="bi bi-globe"></i></a>
         </div>
       </div>
       <div class="col-md-8">
         <h4 class="text-primary">${trainer.course}</h4>
         <p class="lead">${trainer.bio}</p>
-        
         <div class="bg-light p-3 rounded">
-          <h5 class="fw-bold">Available courses:</h5>
+          <h5 class="fw-bold">Available Courses:</h5>
           <ul class="list-unstyled">
-            <li><i class="fas fa-check text-success me-2"></i> ${trainer.course} - Basic level</li>
-            <li><i class="fas fa-check text-success me-2"></i> ${trainer.course} - Advanced level</li>
-            <li><i class="fas fa-check text-success me-2"></i> Practical workshop </li>
+            <li><i class="fas fa-check text-success me-2"></i> ${trainer.course} - Beginner Level</li>
+            <li><i class="fas fa-check text-success me-2"></i> ${trainer.course} - Advanced Level</li>
+            <li><i class="fas fa-check text-success me-2"></i> Practical Workshop</li>
           </ul>
         </div>
       </div>
@@ -343,18 +375,6 @@ function showTrainerDetails(id) {
   const modal = new bootstrap.Modal(document.getElementById('trainerModal'));
   modal.show();
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  displayTrainers();
-  
-  document.addEventListener('click', function(e) {
-    if(e.target.classList.contains('details-btn') || e.target.closest('.details-btn')) {
-      const btn = e.target.classList.contains('details-btn') ? e.target : e.target.closest('.details-btn');
-      const trainerId = parseInt(btn.getAttribute('data-id'));
-      showTrainerDetails(trainerId);
-    }
-  });
-});
 function showDiplomaDetails(diplomaId) {
   const diploma = diplomas[diplomaId];
   if (!diploma) return;
