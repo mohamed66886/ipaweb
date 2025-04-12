@@ -1,5 +1,4 @@
 
-
 const diplomas = {
   flutterdiploma: {
     name: "Flutter porgram",
@@ -294,8 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const container = document.getElementById('trainersContainer');
   const itemsPerSlide = window.innerWidth >= 992 ? 4 : 2;
   const totalSlides = Math.ceil(trainers.length / itemsPerSlide);
-  
-  // Create carousel items
   for (let i = 0; i < totalSlides; i++) {
     const item = document.createElement('div');
     item.className = `carousel-item ${i === 0 ? 'active' : ''}`;
@@ -329,8 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
     item.appendChild(row);
     container.appendChild(item);
   }
-  
-  // Initialize modal functionality
+
   document.addEventListener('click', function(e) {
     if (e.target.closest('.details-btn')) {
       const btn = e.target.closest('.details-btn');
@@ -340,7 +336,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Show Trainer Details in Modal
 function showTrainerDetails(id) {
   const trainer = trainers.find(t => t.id === id);
   if (!trainer) return;
@@ -376,11 +371,13 @@ function showTrainerDetails(id) {
   modal.show();
 }
 function showDiplomaDetails(diplomaId) {
+
   const diploma = diplomas[diplomaId];
-  if (!diploma) return;
-  
-  const modal = new bootstrap.Modal(document.getElementById('diplomaModal'));
-  
+  if (!diploma) {
+    console.error('Diploma not found:', diplomaId);
+    return;
+  }
+
   document.getElementById('diplomaModalTitle').textContent = diploma.name;
   document.getElementById('diplomaModalName').textContent = diploma.name;
   document.getElementById('diplomaModalImage').src = diploma.image;
@@ -389,30 +386,26 @@ function showDiplomaDetails(diplomaId) {
   document.getElementById('diplomaModalPrice').textContent = diploma.price;
   document.getElementById('diplomaModalStudyType').textContent = diploma.studyType;
   document.getElementById('diplomaModalStartDate').textContent = diploma.startDate;
+
   
   document.getElementById('diplomaModalTrainerImage').src = diploma.trainer.image;
   document.getElementById('diplomaModalTrainerName').textContent = diploma.trainer.name;
   document.getElementById('diplomaModalTrainerBio').textContent = diploma.trainer.bio;
+
   
+  const modal = new bootstrap.Modal(document.getElementById('diplomaModal'));
   modal.show();
 }
-document.addEventListener('DOMContentLoaded', function() {
-  displayTrainers();
-  
-  document.addEventListener('click', function(e) {
-    if(e.target.classList.contains('details-btn') || e.target.closest('.details-btn')) {
-      const btn = e.target.classList.contains('details-btn') ? e.target : e.target.closest('.details-btn');
-      const trainerId = parseInt(btn.getAttribute('data-id'));
-      showTrainerDetails(trainerId);
-    }
-    
-    if(e.target.closest('.cardLink')) {
-      e.preventDefault();
-      const link = e.target.closest('.cardLink');
-      const diplomaId = link.getAttribute('href').split('/').pop();
-      showDiplomaDetails(diplomaId);
-    }
-  });
+
+
+document.addEventListener('click', function(e) {
+  if(e.target.closest('.cardLink')) {
+    e.preventDefault();
+    const link = e.target.closest('.cardLink');
+    const pathParts = link.getAttribute('href').split('/');
+    const diplomaId = pathParts[pathParts.length - 1];
+    showDiplomaDetails(diplomaId);
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
