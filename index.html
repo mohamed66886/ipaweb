@@ -55,9 +55,11 @@
                 </ul>
             </nav>
             <div class="contact">
-                <button class="btn btn-primary" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    Log in <i class="bi bi-box-arrow-in-right"></i>
-                  </button>
+              <div class="user-container" id="userContainer">
+                   
+                   <a href="login/Login.html"> Login <i class="bi bi-box-arrow-in-right"></i></a>
+
+            </div>
     
                     <i class="bi bi-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"></i>
                
@@ -70,7 +72,7 @@
     </header>
     <main>
     <div class="vidd">
-        <video src="img//WEB_EDITED-603b8ade.mp4" autoplay loop playsinline muted></video>
+        <video src="img/Visit IPA.mp4" autoplay loop playsinline muted></video>
     </div>
     <div class="contant">
         <h3>Welcome to <span>IPA</span> website</h3>
@@ -131,7 +133,7 @@
           </div>
           <img data-v-d39dd274="" class="w-100" src="img/2 (1).png" alt="Explore our Diplomas" title="Explore our Diplomas">
           <div data-v-d39dd274="">
-            <a data-v-d39dd274="" href="/ourDiplomas" class="text-decoration-none">
+            <a data-v-d39dd274="" href="#s" class="text-decoration-none">
               <p data-v-d39dd274="" class="text-center fs-4 text-light allTracks" style="cursor: pointer;"> Explore all tracks </p>
             </a>
           </div>
@@ -313,7 +315,58 @@
         </div>
       </div>
     </div>
-                                
+
+    <section class="py-5 partners-section">
+      <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Our Success Partners</h2>
+          
+          <div class="partners-container">
+              <div class="row justify-content-center align-items-center g-4 mb-4">
+                  <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800">
+                      <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                  </div>
+                  <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                      <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                  </div>
+                  <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                      <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                  </div>
+                  <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                      <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                  </div>
+                  <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                </div>
+                <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                  <img src="img/BET.jpg" alt="bet" class="img-fluid">
+              </div>
+              </div>
+          </div>
+          <div class="partners-container">
+            <div class="row justify-content-center align-items-center g-4 mb-4">
+                <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800">
+                    <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                </div>
+                <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                </div>
+                <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                </div>
+                <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <img src="img/BET.jpg" alt="bet" class="img-fluid">
+                </div>
+                <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                  <img src="img/BET.jpg" alt="bet" class="img-fluid">
+              </div>
+              <div class="col partner-logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                <img src="img/BET.jpg" alt="bet" class="img-fluid">
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    
                                 <section class="py-5 bg-light" id="testimonials">
                                   <div class="container">
                                     <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-duration="1000">What Our Students Say</h2>
@@ -418,9 +471,9 @@
                                           <div class="footer-contact">
                                               <h3 class="footer-heading">Contact Us</h3>
                                               <ul class="contact-info">
-                                                  <li><i class="bi bi-geo-alt"></i>Kafr El Sheikh</li>
-                                                  <li><i class="bi bi-telephone"></i> +20 123 456 7890</li>
-                                                  <li><i class="bi bi-envelope"></i>mohamedrashad2003@.com</li>
+                                                   <a href="https://maps.app.goo.gl/xynq9r5ujLqUbnpKA"><li><i class="bi bi-geo-alt"></i>Kafr El Sheikh</li></a>
+                                                  <a href="tel:+201000998187"><li><i class="bi bi-telephone"></i> +20 100 099 8187</li></a>
+                                                  <a href="mailto:ipaegy@gmail.com"><li><i class="bi bi-envelope"></i>ipaegy@gmail.com</li></a>
                                                   <li><i class="bi bi-clock"></i> Sun-Thu: 9AM - 5PM</li>
                                               </ul>
                                           </div>
@@ -428,12 +481,12 @@
                                           <div class="footer-newsletter">
                                               <h3 class="footer-heading">Newsletter</h3>
                                               <p>Subscribe to get updates on courses and events</p>
-                                              <form class="newsletter-form">
-                                                  <input type="email" placeholder="Your Email" required>
-                                                  <button type="submit" class="subscribe-btn">
-                                                      <i class="bi bi-send"></i>
-                                                  </button>
-                                              </form>
+                                              <form class="newsletter-form" id="google-form">
+                                                <input type="email" name="email" placeholder="Your Email" required>
+                                                <button type="submit" class="subscribe-btn">
+                                                    <i class="bi bi-send"></i>
+                                                </button>
+                                            </form>
                                           </div>
                                       </div>
                               
@@ -458,46 +511,6 @@
 <script>
   AOS.init();
 </script>
-
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Register Info</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="loginForm">
-            <div class="mb-3">
-              <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Address</label>
-              <input type="text" class="form-control" id="address" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Faculty</label>
-              <input type="text" class="form-control" id="faculty" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" required pattern="^01[0-2,5]{1}[0-9]{8}$">
-            </div>
-            <div class="mb-3">
-              <label for="userImage" class="form-label">Upload Image</label>
-              <input type="file" class="form-control" id="userImage" accept="image/*">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" id="submitBtn" class="btn btn-primary">Register</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
 <div class="modal fade" id="diplomaModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -548,7 +561,7 @@
               </ul>
             </div>
             
-            <button class="btn btn-primary w-100 py-2">Enroll Now</button>
+            <a href="Course Details.html"><button class="btn btn-primary w-100 py-2">more details</button></a>
           </div>
         </div>
       </div>
@@ -588,8 +601,9 @@
     
   </div>
 </div>
+
 <audio id="backgroundAudio" loop>
-  <source src="img/WEB_EDITED-603b8de.mp4" type="audio/mpeg">
+  <source src="img/WhatsAVideo 2025-03-20 at 10.09.50.mp4" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 <button id="audioControl" class="audio-control-btn">

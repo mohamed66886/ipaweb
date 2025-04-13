@@ -171,16 +171,7 @@ function animateValue(element, start, end, duration) {
       loginForm.reportValidity();
     }
   });
-  function saveUserData(userData) {
-    localStorage.setItem('userData', JSON.stringify(userData));
-    
-    updateUI(userData);
-    
-    sendEmail(userData);
-    
-    const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-    modal.hide();
-  }
+
     
     function sendEmail(userData) {
       const templateParams = {
@@ -459,4 +450,121 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setTimeout(hideLoading, 1000);
   
+});
+function updateUI(userData) {
+  const userContainer = document.getElementById('userContainer');
+  
+  if (userData) {
+      userContainer.innerHTML = `
+          <div class="dropdown">
+              <button class="btn btn-transparent dropdown-toggle text-white" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  ${userData.imageUrl ? 
+                      `<img src="${userData.imageUrl}" class="user-avatar rounded-circle me-2" width="30" height="30">` : 
+                      `<i class="bi bi-person-circle me-2"></i>`}
+                  ${userData.name}
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                  <li><a class="dropdown-item" href="#" id="logoutBtn">Logout <i class="bi bi-box-arrow-right ms-2"></i></a></li>
+              </ul>
+          </div>
+      `;
+
+      document.getElementById('logoutBtn').addEventListener('click', function(e) {
+          e.preventDefault();
+          localStorage.removeItem('userData');
+          location.reload();
+      });
+  } else {
+      userContainer.innerHTML = `
+          <button class="btn btn-primary" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Log in <i class="bi bi-box-arrow-in-right"></i>
+          </button>
+      `;
+  }
+}
+
+function saveUserData(userData) {
+  localStorage.setItem('userData', JSON.stringify(userData));
+  
+  updateUI(userData);
+  
+  sendEmail(userData);
+  
+  const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+  modal.hide();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  emailjs.init('8MaeV7KdZlgEJTvNkMRYJ');
+  
+  const savedUser = localStorage.getItem('userData');
+  if (savedUser) {
+      updateUI(JSON.parse(savedUser));
+  }
+
+});
+document.getElementById("google-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const email = this.email.value;
+  const formData = new FormData();
+  formData.append("entry.1587113359", email);
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSemzDqu0xRfkcQmIyji5XW9_6cQymZQOxI2eRCM4Dba9Fga6g/formResponse", {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+  }).then(() => {
+      alert("Thank you for your submission!");
+      this.reset();
+  }).catch(() => {
+      alert("There was an error submitting your form. Please try again.");
+  });
+});
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
+document.getElementById('imageUpload').addEventListener('change', function(e) {
+    if (e.target.files && e.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            document.getElementById('profileImage').src = event.target.result;
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    }
+});
+
+document.querySelectorAll('.course-card').forEach(card => {
+    card.addEventListener('click', function() {
+        console.log('Navigating to course...');
+    });
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const successAlert = document.createElement('div');
+  successAlert.className = 'alert alert-success mt-3';
+  successAlert.innerHTML = `
+      <i class="bi bi-check-circle-fill me-2"></i>
+      Thank you for your enrollment! We've sent confirmation details to your email.
+  `;
+  
+  this.appendChild(successAlert);
+  
+  setTimeout(() => {
+      successAlert.remove();
+      this.reset();
+      bootstrap.Modal.getInstance(document.getElementById('enrollModal')).hide();
+  }, 3000);
 });

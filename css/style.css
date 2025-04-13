@@ -16,6 +16,9 @@ html{
 h5{
   color: var(--bg) !important;
 }
+a{
+  text-decoration: none !important;
+}
 .header{
   background-color: var(--bg);
 }
@@ -59,9 +62,11 @@ header{
     padding: 10px 0;
 }
 header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex
+  ;
+      justify-content: space-between;
+      align-items: center;
+      overflow: visible;
 }
 header .container .loog img{
     width: 80px;
@@ -1016,10 +1021,10 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 }
 
 .contact-info i {
-  margin-right: 10px;
+
   color: #ffffff;
   font-size: 1.1rem;
-  margin-top: 3px;
+
 }
 
 .footer-social {
@@ -1111,7 +1116,125 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   color: #3498db;
 }
 
+.user-avatar {
+  object-fit: cover;
+}
 
+.dropdown-toggle::after {
+  vertical-align: middle;
+}
+.dropdown a{
+  color: var(--bg) !important;
+}
+.dropdown ul {
+  padding: 0 ;
+}
+
+.user-container .btn-transparent {
+  background: transparent !important;
+  border: none;
+  color: white !important;
+}
+
+.user-container .btn-transparent:hover {
+  opacity: 0.8;
+}
+.user-container a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  color: var(--bg) !important;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.user-container a i{
+  font-size: 18px !important;
+  color: var(--bg) !important;
+}
+.user-container a:hover{
+  background-color: var(--bg);
+  color: white !important;
+}
+.user-container a:hover i{
+  color: white !important;
+}
+.dropdown-menu {
+  min-width: 10rem;
+}
+.partners-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 1s ease-in-out;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .partner-logo {
+    flex: 1 0 25%;
+  }
+}
+.course-hero {
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg) 100%);
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+}
+
+.course-hero .breadcrumb {
+  background: transparent;
+  padding: 0;
+}
+
+.course-hero .breadcrumb-item a {
+  text-decoration: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(13, 110, 253, 0.25);
+}
+
+.modal.fade .modal-dialog {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
 
   @media (max-width: 767px) {
     .footer-grid {
@@ -1119,13 +1242,23 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
       gap: 30px;
       text-align: center;
   }
+  .course-hero {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.course-hero .btn {
+    margin: 0 auto;
+}
+
   .carousel-item .row .card-body .card-title {
      font-size: 17px;
      margin-top: 2px;
   }
   .carousel-item .row .card-body p{
     font-size: 13px;
-    
+
   }
   .footer-bottom {
     flex-direction: column;
@@ -1348,4 +1481,18 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
-  }
+  }@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-primary {
+    animation: pulse 2s infinite;
+}
+
+.btn-primary:hover {
+    animation: none;
+    transform: translateY(-2px);
+}
+

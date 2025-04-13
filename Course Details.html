@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - IPA Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/IMG_7897.jpg">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingSection">
+        <div class="loading-content">
+            <img src="img/1.png" alt="IPA Logo" class="loading-logo">
+            <div class="loading-circle"></div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="loog">
+                <a href="index.html"><img src="img/2 (1).png" alt="Logo">
+                  
+                </a>
+                
+            </div>
+            <nav>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="index.html#courses">Courses</a></li>
+                  <li><a href="events.html" >Events</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+
+                   
+                </ul>
+            </nav>
+            <div class="contact">
+                <div class="user-container" id="userContainer">
+                   
+                    <a href="login/Login.html"> Login <i class="bi bi-box-arrow-in-right"></i></a>
+ 
+             </div>
+    
+                    <i class="bi bi-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"></i>
+               
+                
+            
+               
+              
+            </div>
+        </div>
+    </header>
+    <section class="course-hero courses-heder text-white py-5" >
+        <div class="container">
+            <div class="row align-items-center" style="margin-top: 30px;">
+                <div class="col-md-6 col-12" data-aos="fade-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3">Flutter Development</h1>
+                    <p class="lead mb-4">Master cross-platform mobile development with Flutter and Dart</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <span class="badge bg-white text-primary fs-6 px-3 py-2">
+                            <i class="bi bi-clock me-1"></i> 60 Hours
+                        </span>
+                        <span class="badge bg-white text-primary fs-6 px-3 py-2">
+                            <i class="bi bi-people me-1"></i> 120 Students
+                        </span>
+                        <span class="badge bg-white text-primary fs-6 px-3 py-2">
+                            <i class="bi bi-star-fill me-1"></i> 4.9/5
+                        </span>
+                    </div>
+                    <button class="btn btn-light btn-lg px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#enrollModal">
+                        <i class="bi bi-pencil-square me-2"></i> Enroll Now
+                    </button>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body">
+                            <h3 class="mb-4">About This Course</h3>
+                            <p class="lead">Become a full-fledged Flutter developer by building real-world applications and mastering state management, APIs, and Firebase integration.</p>
+                            
+                            <h4 class="mt-5 mb-3">What You'll Learn</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Flutter Widgets and Layouts</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> State Management (Provider, Bloc)</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Firebase Integration</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> API Integration</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Publishing to App Stores</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Advanced Animations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mt-5 mb-3">Course Curriculum</h4>
+                            <div class="accordion" id="curriculumAccordion">
+                                <div class="accordion-item border-0 mb-2 shadow-sm">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#week1">
+                                            Week 1: Introduction to Flutter
+                                        </button>
+                                    </h2>
+                                    <div id="week1" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item border-0 py-2 d-flex justify-content-between align-items-center">
+                                                    <span><i class="bi bi-play-circle text-primary me-2"></i> Introduction to Dart</span>
+                                                    <span class="badge bg-light text-dark">30 min</span>
+                                                </li>
+                                                <li class="list-group-item border-0 py-2 d-flex justify-content-between align-items-center">
+                                                    <span><i class="bi bi-play-circle text-primary me-2"></i> Flutter Widgets Basics</span>
+                                                    <span class="badge bg-light text-dark">45 min</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item border-0 mb-2 shadow-sm">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#week2">
+                                            Week 2: State Management
+                                        </button>
+                                    </h2>
+                                    <div id="week2" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                                        <div class="accordion-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item border-0 py-2 d-flex justify-content-between align-items-center">
+                                                    <span><i class="bi bi-play-circle text-primary me-2"></i> Provider Pattern</span>
+                                                    <span class="badge bg-light text-dark">60 min</span>
+                                                </li>
+                                                <li class="list-group-item border-0 py-2 d-flex justify-content-between align-items-center">
+                                                    <span><i class="bi bi-play-circle text-primary me-2"></i> Bloc Pattern</span>
+                                                    <span class="badge bg-light text-dark">75 min</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card shadow-sm border-0 mb-4" data-aos="fade-up">
+                        <div class="card-body">
+                            <h3 class="mb-4">About the Instructor</h3>
+                            <div class="d-flex align-items-start">
+                                <img src="https://via.placeholder.com/100" alt="Instructor" class="rounded-circle me-4" width="100">
+                                <div>
+                                    <h4>Mohamed Abdou</h4>
+                                    <p class="text-muted mb-2">Senior Flutter Developer</p>
+                                    <p>With over 5 years of experience in mobile development, Mohamed has built more than 30 apps in the Play Store and App Store. He specializes in Flutter architecture and state management.</p>
+                                    <div class="d-flex gap-3 mt-3">
+                                        <a href="#" class="text-primary"><i class="bi bi-linkedin fs-5"></i></a>
+                                        <a href="#" class="text-primary"><i class="bi bi-github fs-5"></i></a>
+                                        <a href="#" class="text-primary"><i class="bi bi-globe fs-5"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="card shadow-sm border-0 sticky-top" style="top: 20px;">
+                        <div class="card-body">
+                            <h4 class="mb-4">Course Details</h4>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-uppercase text-muted mb-3">Price</h6>
+                                <div class="d-flex align-items-center">
+                                    <span class="fs-3 fw-bold text-primary">EGP 3,500</span>
+                                    <span class="ms-2 text-decoration-line-through text-muted">EGP 5,000</span>
+                                    <span class="badge bg-danger ms-2">30% OFF</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-uppercase text-muted mb-3">Schedule</h6>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-calendar-week text-primary me-2"></i> Starts: May 15, 2025</li>
+                                    <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i> Duration: 8 Weeks</li>
+                                    <li class="mb-2"><i class="bi bi-alarm text-primary me-2"></i> Time: 6:00 PM - 9:00 PM</li>
+                                    <li><i class="bi bi-geo-alt text-primary me-2"></i> Location: Online / IPA Academy</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-uppercase text-muted mb-3">Requirements</h6>
+                                <ul class="list-unstyled">
+                                    <li class="mb-1"><i class="bi bi-check-circle text-primary me-2"></i> Basic Programming Knowledge</li>
+                                    <li class="mb-1"><i class="bi bi-check-circle text-primary me-2"></i> Laptop with 8GB RAM</li>
+                                    <li><i class="bi bi-check-circle text-primary me-2"></i> Android Studio / Xcode</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#enrollModal">
+                                <i class="bi bi-pencil-square me-2"></i> Enroll Now
+                            </button>
+                            
+                            <div class="text-center mt-3">
+                                <small class="text-muted">or <a href="#" class="text-primary">Contact Us</a> for more info</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>What Our Students Say</h2>
+                <p class="lead text-muted">Hear from our graduates about their experience</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <i class="bi bi-quote fs-1 text-primary opacity-25 me-3"></i>
+                                <div>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">This course transformed my career. The instructor's deep knowledge and practical approach made learning Flutter enjoyable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 pt-0">
+                            <div class="d-flex align-items-center">
+                                <img src="https://via.placeholder.com/50" alt="Student" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Ahmed Naeim</h6>
+                                    <small class="text-muted">Mobile Developer at TechSolutions</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="enrollModalLabel">Enroll in Flutter Development</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="enrollmentForm">
+                        <div class="mb-4 text-center">
+                            <h4 class="mb-1">Course Fee: <span class="text-primary">EGP 3,500</span></h4>
+                            <small class="text-muted">30% discount applied</small>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="paymentMethod" class="form-label">Payment Method</label>
+                            <select class="form-select" id="paymentMethod" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="vodafone">Vodafone Cash</option>
+                                <option value="instapay">InstaPay</option>
+                                <option value="credit">Credit Card</option>
+                                <option value="bank">Bank Transfer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the <a href="#" class="text-primary">Terms and Conditions</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">
+                            <i class="bi bi-lock-fill me-2"></i> Complete Enrollment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <img src="img/2 (1).png" alt="IPA Academy" class="footer-logo">
+                    <p class="footer-about">Professional International Training Company (a closed joint stock company) was established on 14/6/2015.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html§#courses">Courses</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                         <a href="https://maps.app.goo.gl/xynq9r5ujLqUbnpKA"><li><i class="bi bi-geo-alt"></i>Kafr El Sheikh</li></a>
+                        <a href="tel:+201000998187"><li><i class="bi bi-telephone"></i> +20 100 099 8187</li></a>
+                        <a href="mailto:ipaegy@gmail.com"><li><i class="bi bi-envelope"></i>ipaegy@gmail.com</li></a>
+                        <li><i class="bi bi-clock"></i> Sun-Thu: 9AM - 5PM</li>
+                    </ul>
+                </div>
+    
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to get updates on courses and events</p>
+                    <form class="newsletter-form" id="google-form">
+                      <input type="email" name="email" placeholder="Your Email" required>
+                      <button type="submit" class="subscribe-btn">
+                          <i class="bi bi-send"></i>
+                      </button>
+                  </form>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>&copy; 2025 IPA Academy. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="§">by mohamed rashad</a>
+                </div>
+            </div>
+        </div>
+    </footer>          
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+    </script>
+</body>
+</html>

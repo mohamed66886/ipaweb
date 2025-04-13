@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="logo">
+            <img src="../img/1.png" alt="Company Logo">
+        </div>
+        
+        <h2>Create Your Account</h2>
+        
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" placeholder="Phone Number">
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+                <div class="password-strength">
+                    <div class="strength-meter" id="strength-meter"></div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+            
+            <div class="input-group">
+                <select required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                </select>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+            
+            <button type="submit">Create Account</button>
+            
+            <div class="login-link">
+                Already have an account? <a href="Login.html">Log in</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="login.js" ></script>
+</body>
+</html>

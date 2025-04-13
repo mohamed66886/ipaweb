@@ -1,0 +1,146 @@
+:root {
+    --maincolor: #0449aa;
+    --secondarycolor: #2980b9;
+    --darkcolor: #2c3e50;
+    --lightcolor: #ecf0f1;
+    --successcolor: #27ae60;
+    --warningcolor: #f39c12;
+    --dangercolor: #e74c3c;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f9fa;
+}
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+    background-color: var(--maincolor) !important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 1.25rem;
+    text-align: center;
+    background-color: var(--lightcolor) !important;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: #fff;
+    background-color: var(--maincolor);
+    transition: all 0.3s;
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: var(--maincolor);
+    color: white;
+    font-weight: bold;
+}
+
+#sidebar-wrapper .list-group-item:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.bi-list{
+    font-size: 1.5rem;
+}
+
+#sidebar-wrapper .sub-item {
+    padding-left: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.activity-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.activity-content {
+    flex-grow: 1;
+}
+
+.table {
+    font-size: 0.9rem;
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--darkcolor);
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 10px;
+}
