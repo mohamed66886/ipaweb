@@ -539,8 +539,8 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 }
 
 #testimonials {
-  background-color: #dfdddd !important;
-  color: var(--maincolor) !important;
+  background-color: var(--bg) !important;
+  color: var(--white) !important;
 }
 
 .testimonial-card {
@@ -1021,7 +1021,7 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 }
 
 .contact-info i {
-
+  margin-right: 10px;
   color: #ffffff;
   font-size: 1.1rem;
 
@@ -1237,8 +1237,81 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 }
 .totalcor{
   font-size: 18px;
-  ba
+  font-weight: 100 !important;
+  text-align: center;
 }
+.totalcor a{
+  text-decoration: none;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+}
+.totalcor a .totalcard{
+  padding: 10px ;
+  background-color: var(--bg) !important;
+  border-radius: 10px;
+  margin: 10px 0;
+transition: all 0.3s ease;
+}
+.totalcor a .totalcard:hover{
+  background-color: var(--maincolor) !important;
+  box-shadow: #0000002d 0px 0px 20px !important;
+}
+.accreditations-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.accreditation-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.accreditation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.accreditation-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.accreditation-logo {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.accreditation-body h4 {
+  font-size: 1.25rem;
+  margin: 15px 0 10px;
+  color: var(--maincolor);
+}
+
+.accreditation-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+
 
   @media (max-width: 767px) {
     .footer-grid {
@@ -1246,6 +1319,9 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
       gap: 30px;
       text-align: center;
   }
+  .accreditation-card {
+    padding: 20px;
+}
   .course-hero {
     text-align: center;
     padding-top: 60px;
