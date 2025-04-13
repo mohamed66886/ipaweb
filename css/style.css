@@ -946,7 +946,6 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   background: var(--bg);
   color: #f8f9fa;
   padding: 60px 0 0;
-  margin-top: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -1020,7 +1019,7 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   color: #adb5bd;
 }
 
-.contact-info i {
+.footer-grid .contact-info i {
   margin-right: 10px;
   color: #ffffff;
   font-size: 1.1rem;
@@ -1311,6 +1310,105 @@ transition: all 0.3s ease;
   color: #666;
 }
 
+.courses-section {
+
+  background-size: cover;
+  color: white;
+  padding: 80px 0;
+}
+
+/* .background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(226, 230, 235, 0.7);
+  z-index: 0;
+} */
+
+.course-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.course-img {
+  overflow: hidden;
+  height: 160px;
+}
+
+.course-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-img img {
+  transform: scale(1.1);
+}
+
+.course-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.course-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--maincolor);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.course-category {
+  font-size: 0.8rem;
+  color: var(--maincolor);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.course-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.course-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: auto;
+}
+
+
 
 
   @media (max-width: 767px) {
@@ -1319,6 +1417,13 @@ transition: all 0.3s ease;
       gap: 30px;
       text-align: center;
   }
+  .course-img {
+    height: 120px;
+}
+
+.course-content {
+    padding: 15px;
+}
   .accreditation-card {
     padding: 20px;
 }
