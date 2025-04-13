@@ -1,0 +1,55 @@
+/* Event-specific styles */
+.event-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.event-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+/* Animations */
+.new-row {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.update-row {
+    animation: pulseUpdate 1.5s;
+}
+
+.delete-row {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(100%); }
+}
+
+@keyframes pulseUpdate {
+    0% { background-color: rgba(40, 167, 69, 0.1); }
+    50% { background-color: rgba(40, 167, 69, 0.3); }
+    100% { background-color: transparent; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event-image {
+        width: 60px;
+        height: 40px;
+    }
+}

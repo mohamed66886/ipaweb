@@ -1235,6 +1235,10 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 .btn {
   transition: all 0.3s ease;
 }
+.totalcor{
+  font-size: 18px;
+  ba
+}
 
   @media (max-width: 767px) {
     .footer-grid {
