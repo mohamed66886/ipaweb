@@ -219,6 +219,13 @@ header .container .contact button:hover{
     font-family: var(--font);
     margin-bottom: 20px;
 } 
+.userlogin h5{
+    color: var(--white) !important;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font);
+    margin: 0 !important;
+}
 .contant button{
     background-color: var(--maincolor);
     color: var(--white);
@@ -1450,7 +1457,12 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   flex-direction: column;
   color: #333;
 }
-
+.privacy-page{
+  padding-top: 10rem !important;
+}
+.terms-page{
+  padding-top: 10rem !important;
+}
 .course-badge {
   position: absolute;
   top: 10px;

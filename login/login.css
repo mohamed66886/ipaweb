@@ -311,6 +311,12 @@ input, select {
     font-size: 14px;
     transition: all 0.3s;
 }
+.signup-link{
+    margin-top: 30px;
+    font-size: 15px;
+    color: #7f8c8d;
+    text-align: center;
+}
 
 select {
     appearance: none;
