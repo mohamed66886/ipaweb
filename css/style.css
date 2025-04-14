@@ -1234,27 +1234,111 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
 .btn {
   transition: all 0.3s ease;
 }
-.totalcor{
-  font-size: 18px;
-  font-weight: 100 !important;
+
+.course-categories {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-categories:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg) 100%);
+  z-index: 1;
+}
+
+.course-categories .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   text-align: center;
 }
-.totalcor a{
+
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.category-card {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
   text-decoration: none;
-  color: var(--white) !important;
-  font-weight: 600 !important;
 }
-.totalcor a .totalcard{
-  padding: 10px ;
-  background-color: var(--bg) !important;
-  border-radius: 10px;
-  margin: 10px 0;
-transition: all 0.3s ease;
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
-.totalcor a .totalcard:hover{
-  background-color: var(--maincolor) !important;
-  box-shadow: #0000002d 0px 0px 20px !important;
+
+.category-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 }
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.category-content {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.category-content h4 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.course-count {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: #fff;
+  color: #2980b9;
+}
+
 .accreditations-section {
   position: relative;
   overflow: hidden;
