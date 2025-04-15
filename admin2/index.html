@@ -573,79 +573,7 @@
         </div>
     </div>
 
-    <!-- Add/Edit Trainer Modal -->
-    <div class="modal fade" id="trainerFormModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="trainerModalTitle">Add New Trainer</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="trainerForm">
-                        <input type="hidden" id="trainerId">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="trainerName" class="form-label">Trainer Name</label>
-                                <input type="text" class="form-control" id="trainerName" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="trainerSpecialty" class="form-label">Specialty</label>
-                                <input type="text" class="form-control" id="trainerSpecialty" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="trainerImage" class="form-label">Trainer Image</label>
-                                <input type="file" class="form-control" id="trainerImage" accept="image/*">
-                                <small class="text-muted">Recommended dimensions: 500x500 pixels</small>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="trainerExperience" class="form-label">Years of Experience</label>
-                                <input type="number" class="form-control" id="trainerExperience" required>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <label for="trainerBio" class="form-label">Bio</label>
-                                <textarea class="form-control" id="trainerBio" rows="3" required></textarea>
-                            </div>
-                            
-                            <div class="col-12 mb-3">
-                                <label class="form-label">Social Media Links</label>
-                                <div class="row">
-                                    <div class="col-md-6 mb-2">
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="bi bi-facebook"></i></span>
-                                            <input type="url" class="form-control" id="trainerFacebook" placeholder="Facebook URL">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="bi bi-twitter"></i></span>
-                                            <input type="url" class="form-control" id="trainerTwitter" placeholder="Twitter URL">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="bi bi-linkedin"></i></span>
-                                            <input type="url" class="form-control" id="trainerLinkedin" placeholder="LinkedIn URL">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="bi bi-globe"></i></span>
-                                            <input type="url" class="form-control" id="trainerWebsite" placeholder="Website URL">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="text-end">
-                            <button type="submit" class="btn btn-primary">Save Trainer</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Partners Management Modal -->
     <div class="modal fade" id="partnersModal" tabindex="-1" aria-hidden="true">
@@ -830,26 +758,34 @@
                             <textarea class="form-control" id="testimonialDescription" rows="3" required></textarea>
                         </div>
 
-                        <div class="col-md-6">
-                            <label for="testimonialFacebook" class="form-label">Facebook</label>
-                            <input type="url" class="form-control" id="testimonialFacebook">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="testimonialLinkedin" class="form-label">LinkedIn</label>
-                            <input type="url" class="form-control" id="testimonialLinkedin">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="testimonialGithub" class="form-label">GitHub</label>
-                            <input type="url" class="form-control" id="testimonialGithub">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="testimonialDate" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="testimonialDate" required>
-                        </div>
-                    </div>
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Social Media Links</label>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-facebook"></i></span>
+                                        <input type="url" class="form-control" id="trainerFacebook" placeholder="Facebook URL">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-twitter"></i></span>
+                                        <input type="url" class="form-control" id="trainerTwitter" placeholder="Twitter URL">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-linkedin"></i></span>
+                                        <input type="url" class="form-control" id="trainerLinkedin" placeholder="LinkedIn URL">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-globe"></i></span>
+                                        <input type="url" class="form-control" id="trainerWebsite" placeholder="Website URL">
+                                    </div>
+                                </div>
+                            </div>
 
                     <div class="text-end mt-4">
                         <button type="submit" class="btn btn-primary">Save Testimonial</button>
